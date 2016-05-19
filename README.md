@@ -20,6 +20,8 @@ UI
 - [react-native-refreshable-listview](https://github.com/jsdf/react-native-refreshable-listview)
 - [react-native-image-picker](https://github.com/marcshilling/react-native-image-picker)
 - [react-native-material-design](https://github.com/react-native-material-design/react-native-material-design)
+- [react-native-animatable](https://github.com/oblador/react-native-animatable)
+- [react-native-swipeout](https://github.com/dancormier/react-native-swipeout)
 
 
 ## Prerequisites
