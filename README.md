@@ -17,6 +17,9 @@ UI
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - [tcomb-form-native](https://github.com/gcanti/tcomb-form-native)
 - [react-native-material-kit](https://github.com/xinthink/react-native-material-kit)
+- [react-native-refreshable-listview](https://github.com/jsdf/react-native-refreshable-listview)
+- [react-native-image-picker](https://github.com/marcshilling/react-native-image-picker)
+- [react-native-material-design](https://github.com/react-native-material-design/react-native-material-design)
 
 
 ## Prerequisites
