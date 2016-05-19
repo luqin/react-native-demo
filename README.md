@@ -22,6 +22,9 @@ UI
 - [react-native-material-design](https://github.com/react-native-material-design/react-native-material-design)
 - [react-native-animatable](https://github.com/oblador/react-native-animatable)
 - [react-native-swipeout](https://github.com/dancormier/react-native-swipeout)
+- [react-native-lightbox](https://github.com/oblador/react-native-lightbox)
+- [react-native-viewpager](https://github.com/race604/react-native-viewpager)
+- [react-native-chart](https://github.com/tomauty/react-native-chart)
 
 
 ## Prerequisites
