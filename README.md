@@ -25,6 +25,8 @@ UI
 - [react-native-lightbox](https://github.com/oblador/react-native-lightbox)
 - [react-native-viewpager](https://github.com/race604/react-native-viewpager)
 - [react-native-chart](https://github.com/tomauty/react-native-chart)
+- [react-native-gifted-listview](https://github.com/FaridSafi/react-native-gifted-listview)
+- [react-native-modalbox](https://github.com/maxs15/react-native-modalbox)
 
 
 ## Prerequisites
