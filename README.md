@@ -17,7 +17,7 @@
 UI
 
 - [react-native-camera](https://github.com/lwansbrough/react-native-camera)
-- [react-native-scrollable-tab-view](https://github.com/lwansbrough/react-native-camera)
+- [react-native-scrollable-tab-view](https://github.com/skv-headless/react-native-scrollable-tab-view)
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - [tcomb-form-native](https://github.com/gcanti/tcomb-form-native)
 - [react-native-material-kit](https://github.com/xinthink/react-native-material-kit)
