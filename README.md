@@ -7,6 +7,7 @@
 - [babeljs](https://babeljs.io/)
 - [eslint](http://eslint.org/)
 - [chriso/validator.js](https://github.com/chriso/validator.js) For simple yet powerfull Este sync/async validation.
+- [react-native-sound](https://github.com/zmxv/react-native-sound)
 
 UI
 
