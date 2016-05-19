@@ -9,13 +9,14 @@
 - [chriso/validator.js](https://github.com/chriso/validator.js) For simple yet powerfull Este sync/async validation.
 - [react-native-sound](https://github.com/zmxv/react-native-sound)
 - [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
-- [react-native-material-kit](https://github.com/xinthink/react-native-material-kit)
 
 UI
 
 - [react-native-camera](https://github.com/lwansbrough/react-native-camera)
 - [react-native-scrollable-tab-view](https://github.com/lwansbrough/react-native-camera)
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+- [tcomb-form-native](https://github.com/gcanti/tcomb-form-native)
+- [react-native-material-kit](https://github.com/xinthink/react-native-material-kit)
 
 
 ## Prerequisites
