@@ -11,6 +11,7 @@
 UI
 
 - [react-native-camera](https://github.com/lwansbrough/react-native-camera)
+- [react-native-scrollable-tab-view](https://github.com/lwansbrough/react-native-camera)
 
 
 
