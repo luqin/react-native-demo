@@ -8,6 +8,8 @@
 - [eslint](http://eslint.org/)
 - [chriso/validator.js](https://github.com/chriso/validator.js) For simple yet powerfull Este sync/async validation.
 - [react-native-sound](https://github.com/zmxv/react-native-sound)
+- [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
+- [react-native-material-kit](https://github.com/xinthink/react-native-material-kit)
 
 UI
 
