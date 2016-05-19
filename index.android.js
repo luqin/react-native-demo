@@ -8,11 +8,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View,
+  View
 } from 'react-native';
-
-
-var LinkingExample = require('./src/LinkingExample');
 
 class MyProject extends Component {
   render() {
@@ -27,7 +24,6 @@ class MyProject extends Component {
         <Text style={styles.instructions}>
           Shake or press menu button for dev menu
         </Text>
-		<LinkingExample/>
       </View>
     );
   }
