@@ -6,11 +6,12 @@ var {
   View,
   Image,
 } = ReactNative;
+
 import ScrollableTabView, {ScrollableTabBar,} from 'react-native-scrollable-tab-view';
+import {ImagePickerManager} from 'NativeModules';
+import LinearGradient from 'react-native-linear-gradient';
 
 var LinkingExample = require('./LinkingExample');
-// var BadInstagramCloneApp = require('./BadInstagramCloneApp');
-var ImagePickerManager = require('NativeModules').ImagePickerManager;
 
 export default React.createClass({
   getInitialState() {
@@ -77,19 +78,37 @@ export default React.createClass({
   },
   render() {
     let { avatarSource, imgRes } = this.state;
-    let e;
+    let avatar;
     if (avatarSource) {
-      console.info(this.state)
-      e = <Image tabLabel='Tab #3' source={avatarSource}
-                 style={[styles.uploadAvatar, {width: imgRes.width, height: 50, }]}/>;
+      avatar = (
+        <Image
+          source={avatarSource}
+          style={[styles.uploadAvatar, {width: imgRes.width, height: imgRes.height, }]}
+        />
+      );
+    } else {
+      avatar = (
+        <View style={styles.emptyAvatar}/>
+      )
     }
     return <View style={styles.container}>
       <ScrollableTabView initialPage={0} renderTabBar={() => <ScrollableTabBar />}>
-        <LinkingExample tabLabel='Tab #1'/>
-        <View tabLabel='Tab #2' style={styles.tv}>
-          <Text style={styles.t} onPress={this.p}>选择图片</Text>
+        <LinkingExample tabLabel='Linking'/>
+        <View tabLabel='照片选择'>
+          <LinearGradient
+            start={[0.0, 0.0]} end={[1.0, 1.0]}
+            locations={[0,0.4,0.8]}
+            colors={['yellow', '#3b5998', '#192f6a']}
+            style={styles.linearGradient}
+          >
+            <Text style={styles.buttonText} onPress={this.p}>
+              选择图片
+            </Text>
+          </LinearGradient>
+          <View tabLabel='照片选择' style={styles.avatarContainer}>
+            {avatar}
+          </View>
         </View>
-        {e}
       </ScrollableTabView>
     </View>;
   },
@@ -100,16 +119,32 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 20,
   },
-  tv: {
-    borderWidth: 2,
-    borderBottomColor: 'blue',
+  avatarContainer: {
+    alignItems: 'center',
+  },
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5,
     margin: 5,
   },
-  t: {
-    fontSize: 20,
-    backgroundColor: '#ccc',
+  buttonText: {
+    height: 20,
+    fontSize: 18,
+    fontFamily: 'Gill Sans',
+    textAlign: 'center',
+    margin: 10,
+    color: '#ffffff',
+    backgroundColor: 'transparent',
   },
   uploadAvatar: {
     backgroundColor: '#ddd',
+  },
+  emptyAvatar: {
+    width: 100,
+    height: 100,
+    borderColor: '#ccc',
+    borderWidth: 2,
   }
 });
