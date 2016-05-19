@@ -9,6 +9,10 @@
 - [chriso/validator.js](https://github.com/chriso/validator.js) For simple yet powerfull Este sync/async validation.
 - [react-native-sound](https://github.com/zmxv/react-native-sound)
 - [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
+- [react-native-fs](https://github.com/johanneslumpe/react-native-fs)
+- [react-native-device-info](https://github.com/rebeccahughes/react-native-device-info)
+- [react-native-sqlite-storage](https://github.com/andpor/react-native-sqlite-storage)
+- [react-native-push-notification](https://github.com/zo0r/react-native-push-notification)
 
 UI
 
@@ -27,6 +31,14 @@ UI
 - [react-native-chart](https://github.com/tomauty/react-native-chart)
 - [react-native-gifted-listview](https://github.com/FaridSafi/react-native-gifted-listview)
 - [react-native-modalbox](https://github.com/maxs15/react-native-modalbox)
+- [react-native-linear-gradient](https://github.com/brentvatne/react-native-linear-gradient)
+- [react-swipeable-views](https://github.com/oliviertassinari/react-swipeable-views)
+- [react-native-action-button](https://github.com/mastermoo/react-native-action-button)
+- [react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
+- [react-native-controllers](https://github.com/wix/react-native-controllers)
+- [react-native-progress](https://github.com/oblador/react-native-progress)
+- [react-native-tabs](https://github.com/aksonov/react-native-tabs)
+- [react-native-image-progress](https://github.com/oblador/react-native-image-progress)
 
 
 ## Prerequisites
