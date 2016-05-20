@@ -4,6 +4,8 @@ import {
   View,
 } from 'react-native';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 class Attachment extends React.Component {
 
   static propTypes = {};
@@ -20,10 +22,9 @@ class Attachment extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>
-          Attachment
-        </Text>
+      <View style={{flex:1}}>
+        <Icon name="paperclip" size={20} color="blue"/>
+        <Text>Attachment</Text>
       </View>
     );
   }

@@ -1,6 +1,7 @@
 package com.relax;
 
 import com.facebook.react.ReactActivity;
+import com.imagepicker.ImagePickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.facebook.react.ReactPackage;
@@ -37,6 +38,7 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new ImagePickerPackage(),
             new VectorIconsPackage(),
             new LinearGradientPackage()
         );

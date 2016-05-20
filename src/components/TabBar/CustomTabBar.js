@@ -40,8 +40,8 @@ var styles = StyleSheet.create({
     fontSize: 8,
   },
   separator: {
-    height: 0.5,
-    backgroundColor: 'gray'
+    height: 5,
+    backgroundColor: '#ddd'
   },
 });
 
@@ -122,6 +122,7 @@ var CustomTabBar = React.createClass({
           {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
         </View>
         <Animated.View style={[tabUnderlineStyle, {left}]}/>
+        <View style={styles.separator}/>
       </View>
     );
   },

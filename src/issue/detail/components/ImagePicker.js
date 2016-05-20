@@ -7,11 +7,8 @@ var {
   Image,
 } = ReactNative;
 
-import ScrollableTabView, {ScrollableTabBar,} from 'react-native-scrollable-tab-view';
 import {ImagePickerManager} from 'NativeModules';
 import LinearGradient from 'react-native-linear-gradient';
-
-var LinkingExample = require('./LinkingExample');
 
 export default React.createClass({
   getInitialState() {
@@ -91,9 +88,8 @@ export default React.createClass({
         <View style={styles.emptyAvatar}/>
       )
     }
-    return <View style={styles.container}>
-      <ScrollableTabView initialPage={0} renderTabBar={() => <ScrollableTabBar />}>
-        <LinkingExample tabLabel='Linking'/>
+    return (
+      <View style={styles.container}>
         <View tabLabel='照片选择'>
           <LinearGradient
             start={[0.0, 0.0]} end={[1.0, 1.0]}
@@ -109,8 +105,8 @@ export default React.createClass({
             {avatar}
           </View>
         </View>
-      </ScrollableTabView>
-    </View>;
+      </View>
+    );
   },
 });
 
