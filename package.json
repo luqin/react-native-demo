@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "clean": "cd android && gradlew clean",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "node node_modules/react-native/local-cli/cli.js run-android"
   },
@@ -12,6 +13,7 @@
     "react-native-linear-gradient": "^1.5.7",
     "react-native-router-flux": "^3.22.23",
     "react-native-scrollable-tab-view": "^0.4.3",
+    "react-native-vector-icons": "^2.0.2",
     "react-timer-mixin": "^0.13.3"
   }
 }
