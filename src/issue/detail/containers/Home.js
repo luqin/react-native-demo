@@ -4,9 +4,10 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
-import ScrollableTabView, {ScrollableTabBar,} from 'react-native-scrollable-tab-view';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 import Toolbar from '../components/Toolbar';
+import TabBar from '../../../components/TabBar';
 
 class Home extends React.Component {
 
@@ -25,27 +26,85 @@ class Home extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
         <Toolbar/>
-
-        <ScrollableTabView
-          initialPage={0}
-          renderTabBar={() => <ScrollableTabBar />}
-          style={styles.tabs}
-        >
-          <View tabLabel="详情">
-            <Icon name="rocket" size={30} color="#900"/>
-            <Text>
-              Home1
-            </Text>
-          </View>
-          <Text tabLabel="附件">
-            Home2
-          </Text>
-          <Text tabLabel="React3">
-            Home3
-          </Text>
-        </ScrollableTabView>
+        <TabBar
+          selectedTab={0}
+          activeTintColor={'#1E90FF'}
+          iconSize={20}
+          structure={[
+            {
+              title: '详情',
+              iconName: 'wpforms',
+              renderContent: () => {
+                return (
+                  <View style={{flex:1}}>
+                    <Icon name="wpforms" size={30} color="blue"/>
+                    <Text>Home1</Text>
+                  </View>
+                );}
+            }, {
+              title: '附件',
+              iconName: 'paperclip',
+              renderContent: () => {
+                return (
+                  <View style={{flex:1}}>
+                    <Icon name="paperclip" size={30} color="green"/>
+                    <Text>附件</Text>
+                  </View>
+                );}
+            }, {
+              title: '协同',
+              iconName: 'refresh',
+              renderContent: () => {
+                return (
+                  <View style={{flex:1}}>
+                    <Icon name="refresh" size={30} color="green"/>
+                    <Text>附件</Text>
+                  </View>
+                );}
+            }, {
+              title: '进度',
+              iconName: 'refresh',
+              renderContent: () => {
+                return (
+                  <View style={{flex:1}}>
+                    <Icon name="refresh" size={30} color="green"/>
+                    <Text>附件</Text>
+                  </View>
+                );}
+            }, {
+              title: '设备',
+              iconName: 'tv',
+              renderContent: () => {
+                return (
+                  <View style={{flex:1}}>
+                    <Icon name="refresh" size={30} color="green"/>
+                    <Text>附件</Text>
+                  </View>
+                );}
+            }, {
+              title: '知识',
+              iconName: 'commenting-o',
+              renderContent: () => {
+                return (
+                  <View style={{flex:1}}>
+                    <Icon name="refresh" size={30} color="green"/>
+                    <Text>附件</Text>
+                  </View>
+                );}
+            }, {
+              title: '相关',
+              iconName: 'link',
+              renderContent: () => {
+                return (
+                  <View style={{flex:1}}>
+                    <Icon name="refresh" size={30} color="green"/>
+                    <Text>附件</Text>
+                  </View>
+                );}
+            },
+          ]}
+        />
         <Text style={{marginBottom: 0}}>
           Homeaaaa
         </Text>
