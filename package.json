@@ -1,12 +1,15 @@
 {
-  "name": "Relax",
+  "name": "relax",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android"
   },
   "dependencies": {
     "react": "^15.0.2",
-    "react-native": "^0.26.0"
+    "react-native": "^0.26.0",
+    "react-native-router-flux": "^3.22.23",
+    "react-timer-mixin": "^0.13.3"
   }
 }
