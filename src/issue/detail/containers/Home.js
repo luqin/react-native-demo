@@ -5,6 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import ScrollableTabView, {ScrollableTabBar,} from 'react-native-scrollable-tab-view';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Toolbar from '../components/Toolbar';
 
 class Home extends React.Component {
@@ -32,9 +33,12 @@ class Home extends React.Component {
           renderTabBar={() => <ScrollableTabBar />}
           style={styles.tabs}
         >
-          <Text tabLabel="详情">
-            Home1
-          </Text>
+          <View tabLabel="详情">
+            <Icon name="rocket" size={30} color="#900"/>
+            <Text>
+              Home1
+            </Text>
+          </View>
           <Text tabLabel="附件">
             Home2
           </Text>
