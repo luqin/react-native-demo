@@ -25,10 +25,6 @@ class Home extends React.Component {
     return (
       <View style={styles.container}>
 
-        <Text>
-
-        </Text>
-
         <Toolbar/>
 
         <ScrollableTabView
