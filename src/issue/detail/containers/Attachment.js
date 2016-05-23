@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+import ImagePicker from '../components/ImagePicker';
 
 class Attachment extends React.Component {
 
@@ -25,6 +26,7 @@ class Attachment extends React.Component {
       <View style={{flex:1}}>
         <Icon name="paperclip" size={20} color="blue"/>
         <Text>Attachment</Text>
+        <ImagePicker/>
       </View>
     );
   }

@@ -37,7 +37,7 @@ var styles = StyleSheet.create({
     left: 20,
   },
   labelText: {
-    fontSize: 8,
+    fontSize: 12,
   },
   separator: {
     height: 5,

@@ -8,7 +8,7 @@ var {
 } = ReactNative;
 
 import {ImagePickerManager} from 'NativeModules';
-import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default React.createClass({
   getInitialState() {
@@ -90,20 +90,17 @@ export default React.createClass({
     }
     return (
       <View style={styles.container}>
-        <View tabLabel='照片选择'>
-          <LinearGradient
-            start={[0.0, 0.0]} end={[1.0, 1.0]}
-            locations={[0,0.4,0.8]}
-            colors={['yellow', '#3b5998', '#192f6a']}
-            style={styles.linearGradient}
-          >
-            <Text style={styles.buttonText} onPress={this.p}>
-              选择图片
-            </Text>
-          </LinearGradient>
-          <View tabLabel='照片选择' style={styles.avatarContainer}>
-            {avatar}
-          </View>
+        <Icon.Button
+          onPress={this.p}
+          backgroundColor="#3498DB"
+          name='ios-reverse-camera-outline'
+          size={28}
+          style={styles.iconButton}
+        >
+          <Text style={styles.iconButtonText}>选择图片</Text>
+        </Icon.Button>
+        <View style={styles.avatarContainer}>
+          {avatar}
         </View>
       </View>
     );
@@ -115,15 +112,10 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 20,
   },
-  avatarContainer: {
-    alignItems: 'center',
-  },
-  linearGradient: {
-    flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 5,
+  button: {
     margin: 5,
+    borderWidth: 0.5,
+    borderColor: '#000',
   },
   buttonText: {
     height: 20,
@@ -137,10 +129,21 @@ const styles = StyleSheet.create({
   uploadAvatar: {
     backgroundColor: '#ddd',
   },
+  avatarContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
   emptyAvatar: {
-    width: 100,
     height: 100,
+    width: 100,
     borderColor: '#ccc',
-    borderWidth: 2,
-  }
+    borderWidth: 1,
+  },
+  iconButton: {
+    paddingRight: 30,
+    paddingLeft: 30
+  },
+  iconButtonText: {
+    color: 'rgba(255,255,255,0.9)'
+  },
 });

@@ -10,6 +10,7 @@ import {
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
+import Spinner from '../../../components/Spinner';
 
 import TabBar from '../../../components/TabBar';
 import Detail from './Detail';
@@ -23,10 +24,21 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      data: null,
+    };
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData() {
+    setTimeout(()=> {
+      this.setState({
+        data: {}
+      })
+    }, 1000);
   }
 
   openProfile() {
@@ -34,38 +46,54 @@ class Home extends React.Component {
       'Alert Title',
       '该功能未实现',
       [
-        {text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
-        {text: 'OK', onPress: () => console.log('OK Pressed!')},
+        { text: 'Cancel', onPress: () => console.log('Cancel Pressed!') },
+        { text: 'OK', onPress: () => console.log('OK Pressed!') },
       ]
     )
   }
 
   render() {
+    if (!this.state.data) {
+      return (
+        <View style={{flex: 1, justifyContent: 'center',}}>
+          <Spinner/>
+        </View>
+      );
+    }
+
     return (
       <View style={styles.container}>
-        <ToolbarAndroid
-          title="秦贺的故障报修单"
-          actions={[{title: '故障', show: 'always'}]}
-          onActionSelected={this.openProfile}
-          style={styles.toolbar}
-        />
+        <View style={styles.titleContainer}>
+          <Text style={styles.titleLeft}>
+            秦贺的故障报修单
+          </Text>
+          <Text style={styles.titleRight}>
+            故障 | 业务系统
+          </Text>
+        </View>
         <LinearGradient
           start={[0.0, 0.5]} end={[1.0, 0.5]}
           locations={[0, 0.3, 0.7]}
           colors={['#A89426', '#A89426', '#132131']}
           style={styles.header}
         >
-          <Image
-            style={styles.avatar}
-            source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
-            onPress={this.openProfile}
-          />
-          <Text style={styles.headerName}>
-            秦贺
-          </Text>
-          <Text style={styles.headerRight}>
-            32:20
-          </Text>
+          <View style={styles.headerLeft} onPress={this.openProfile}>
+            <Image
+              style={styles.avatar}
+              source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
+            />
+            <Text style={styles.headerName}>
+              秦贺
+            </Text>
+          </View>
+          <View style={styles.headerRight}>
+            <Text style={{color: '#fff'}}>
+              处理中
+            </Text>
+            <Text style={styles.countdownTimer}>
+              32:20
+            </Text>
+          </View>
         </LinearGradient>
         <TabBar
           selectedTab={0}
@@ -133,9 +161,6 @@ class Home extends React.Component {
             },
           ]}
         />
-        <Text style={{marginBottom: 0}}>
-          Homeaaaa
-        </Text>
       </View>
     );
   }
@@ -145,31 +170,52 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  toolbar: {
-    backgroundColor: "#fff",
+  titleContainer: {
+    flexDirection: 'row',
     height: 30,
+    paddingLeft: 10,
+    paddingRight: 8,
+    justifyContent: 'center',
+  },
+  titleLeft: {
+    flex: 1,
+    color: '#000',
+    fontSize: 15,
+    marginTop: 4,
+  },
+  titleRight: {
+    flex: 1,
+    fontSize: 13,
+    textAlign: 'right',
+    marginTop: 5,
   },
   header: {
     flexDirection: 'row',
-    height: 50,
+    height: 60,
     padding: 10,
+  },
+  headerLeft: {
+    flex: 1,
+    flexDirection: 'row',
   },
   headerName: {
     flex: 1,
     color: '#fff',
-    fontSize: 16,
+    fontSize: 14,
     marginLeft: 8,
   },
   headerRight: {
     width: 50,
+  },
+  countdownTimer: {
     color: '#00FF7F',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
   },
   avatar: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
   },
 });
 
