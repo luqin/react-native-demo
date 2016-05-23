@@ -8,8 +8,8 @@
     "android": "node node_modules/react-native/local-cli/cli.js run-android"
   },
   "dependencies": {
-    "react": "^15.0.2",
-    "react-native": "^0.26.0",
+    "react": "15.0.2",
+    "react-native": "0.26.0",
     "react-native-image-picker": "^0.18.17",
     "react-native-linear-gradient": "^1.5.7",
     "react-native-router-flux": "^3.22.23",
