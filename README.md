@@ -13,6 +13,7 @@
 - [react-native-device-info](https://github.com/rebeccahughes/react-native-device-info)
 - [react-native-sqlite-storage](https://github.com/andpor/react-native-sqlite-storage)
 - [react-native-push-notification](https://github.com/zo0r/react-native-push-notification)
+- [react-native-barcodescanner](https://github.com/ideacreation/react-native-barcodescanner)
 
 UI
 
