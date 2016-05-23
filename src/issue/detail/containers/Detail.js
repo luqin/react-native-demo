@@ -8,8 +8,8 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Ionicon from 'react-native-vector-icons/Ionicons';
 
+import Button from '../../../components/Button';
 import Spinner from '../../../components/Spinner';
 
 class Detail extends React.Component {
@@ -31,11 +31,13 @@ class Detail extends React.Component {
   render() {
     return (
       <View style={{flex:1}}>
-        <Icon name="wpforms" size={20} color="blue"/>
-        <Text>
-          我在公文系统中，对数据进行统计分析，发现按区域人员统计时，数据不准确，偏差很大，整个报表根本就没法用。
-        </Text>
-        <Spinner/>
+        {/* 描述 */}
+        <View style={{margin: 10,}}>
+          <Text>
+            我在公文系统中，对数据进行统计分析，发现按区域人员统计时，数据不准确，偏差很大，整个报表根本就没法用。
+          </Text>
+          <Spinner/>
+        </View>
 
         <View style={styles.separator}/>
         <Text>
@@ -43,24 +45,15 @@ class Detail extends React.Component {
         </Text>
 
         <View style={styles.separator}/>
-        <Text>选中:{this.state.language}</Text>
         <View style={styles.replyContainer}>
           <TextInput
             style={styles.replyInput}
             placeholder="评论"
             multiline={true}
           />
-          <View style={styles.replyButton}>
-            
-          </View>
-          <Ionicon.Button
-            onPress={()=>{console.info('发送')}}
-            backgroundColor="#3498DB"
-            name='ios-reverse-camera-outline'
-            size={20}
-            style={styles.replyButton}>
-            <Text style={styles.replyButtonText}>选择图片</Text>
-          </Ionicon.Button>
+          <Button style={{}}>
+            发送
+          </Button>
         </View>
       </View>
     );
@@ -75,8 +68,8 @@ var styles = StyleSheet.create({
   },
   replyContainer: {
     flexDirection: 'row',
-    // height: 30,
-    marginBottom: 0,
+    bottom: 0,
+    marginRight: 10,
   },
   replyInput: {
     flex: 1,

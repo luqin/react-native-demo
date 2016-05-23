@@ -80,7 +80,8 @@ export default React.createClass({
       avatar = (
         <Image
           source={avatarSource}
-          style={[styles.uploadAvatar, {width: imgRes.width, height: imgRes.height, }]}
+          style={[styles.uploadAvatar]}
+          resizeMode={Image.resizeMode.contain}
         />
       );
     } else {
@@ -102,6 +103,7 @@ export default React.createClass({
         <View style={styles.avatarContainer}>
           {avatar}
         </View>
+
       </View>
     );
   },
@@ -110,7 +112,7 @@ export default React.createClass({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
+    margin: 10,
   },
   button: {
     margin: 5,
@@ -126,15 +128,16 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     backgroundColor: 'transparent',
   },
-  uploadAvatar: {
-    backgroundColor: '#ddd',
-  },
   avatarContainer: {
-    flex: 1,
-    alignItems: 'center',
+    marginTop: 10,
+  },
+  uploadAvatar: {
+    height: 150,
+    // width: 100,
   },
   emptyAvatar: {
-    height: 100,
+    flex: 1,
+    // height: 100,
     width: 100,
     borderColor: '#ccc',
     borderWidth: 1,
