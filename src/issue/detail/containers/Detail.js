@@ -5,7 +5,8 @@ import {
   TextInput,
   View,
   Picker,
-  Image
+  Image,
+  ScrollView,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -34,12 +35,33 @@ class Detail extends React.Component {
           url: 'http://facebook.github.io/react/img/logo_og.png',
         }, {
           type: 'image',
-          url: 'https://github.com/reactjs/react-router/raw/master/logo/vertical@2x.png',
-        }]
+          url: 'https://facebook.github.io/react-native/img/header_logo.png',
+        }, {
+          type: 'image',
+          url: 'https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67',
+        }, {
+          type: 'image',
+          url: 'http://img.sj33.cn/uploads/allimg/201401/7-140120011050954.jpg',
+        }, {
+          type: 'image',
+          url: 'http://facebook.github.io/react/img/logo_og.png',
+        }, {
+          type: 'image',
+          url: 'https://facebook.github.io/react-native/img/header_logo.png',
+        }, {
+          type: 'image',
+          url: 'https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67',
+        }, {
+          type: 'image',
+          url: 'http://img.sj33.cn/uploads/allimg/201401/7-140120011050954.jpg',
+        }, ]
       });
     }, 1000);
   }
 
+  /**
+   * 附件缩略图
+   */
   renderAttachmentThumbnail(item, idx) {
     let e;
     switch (item.type) {
@@ -57,15 +79,19 @@ class Detail extends React.Component {
     return e;
   }
 
-  renderAttachmentList() {
+  renderAttachmentScrollView() {
     let { attachments } = this.state;
     if (!attachments) {
       return <Spinner/>;
     }
     return (
-      <View style={styles.thumbnailContainer}>
+      <ScrollView
+        automaticallyAdjustContentInsets={false}
+        horizontal={true}
+        style={styles.thumbnailContainer}
+      >
         {attachments.map(this.renderAttachmentThumbnail)}
-      </View>
+      </ScrollView>
     );
   }
 
@@ -77,12 +103,12 @@ class Detail extends React.Component {
           <Text>
             我在公文系统中，对数据进行统计分析，发现按区域人员统计时，数据不准确，偏差很大，整个报表根本就没法用。
           </Text>
-          {this.renderAttachmentList()}
+          {this.renderAttachmentScrollView()}
         </View>
 
         <View style={styles.separator}/>
         <Text>
-          我在公文系统中，对数据进行统计分析，发现按区域人员统计时，数据不准确，偏差很大，整个报表根本就没法用。
+          评论（5）
         </Text>
 
         <View style={styles.separator}/>
