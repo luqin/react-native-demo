@@ -1,10 +1,11 @@
 import React from 'react';
 import {
+  StyleSheet,
   Text,
   TextInput,
   View,
   Picker,
-  StyleSheet,
+  Image
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -21,11 +22,51 @@ class Detail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: null,
+      attachments: null,
     };
   }
 
   componentDidMount() {
+    setTimeout(()=> {
+      this.setState({
+        attachments: [{
+          type: 'image',
+          url: 'http://facebook.github.io/react/img/logo_og.png',
+        }, {
+          type: 'image',
+          url: 'https://github.com/reactjs/react-router/raw/master/logo/vertical@2x.png',
+        }]
+      });
+    }, 1000);
+  }
+
+  renderAttachmentThumbnail(item, idx) {
+    let e;
+    switch (item.type) {
+      case 'image':
+        e = (
+          <Image
+            key={idx}
+            style={styles.thumbnailImage}
+            source={{uri: item.url}}
+          />
+        );
+        break;
+      default:
+    }
+    return e;
+  }
+
+  renderAttachmentList() {
+    let { attachments } = this.state;
+    if (!attachments) {
+      return <Spinner/>;
+    }
+    return (
+      <View style={styles.thumbnailContainer}>
+        {attachments.map(this.renderAttachmentThumbnail)}
+      </View>
+    );
   }
 
   render() {
@@ -36,7 +77,7 @@ class Detail extends React.Component {
           <Text>
             我在公文系统中，对数据进行统计分析，发现按区域人员统计时，数据不准确，偏差很大，整个报表根本就没法用。
           </Text>
-          <Spinner/>
+          {this.renderAttachmentList()}
         </View>
 
         <View style={styles.separator}/>
@@ -83,6 +124,18 @@ var styles = StyleSheet.create({
   replyButtonText: {
     color: 'rgba(255,255,255,0.9)',
     height: 30,
+  },
+
+  thumbnailContainer: {
+    flexDirection: 'row',
+    height: 50,
+    marginTop: 10,
+  },
+
+  thumbnailImage: {
+    width: 50,
+    height: 50,
+    marginRight: 5,
   },
 });
 

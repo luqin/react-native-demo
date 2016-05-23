@@ -133,7 +133,6 @@ const styles = StyleSheet.create({
   },
   uploadAvatar: {
     height: 150,
-    // width: 100,
   },
   emptyAvatar: {
     flex: 1,
