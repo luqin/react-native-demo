@@ -69,8 +69,9 @@ React Native: [Getting Started](https://facebook.github.io/react-native/docs/get
 
 ## Dev Tasks
 
-- `react-native start`
-- `react-native run-android`
+- `npm run start`
+- `npm run android`
+- `npm run clean`
 
 ## Production Tasks
 
