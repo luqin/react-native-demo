@@ -69,13 +69,12 @@ class CommentUp extends React.Component {
       <TouchableOpacity
         onPress={this.onUpPress.bind(this)}>
         <View style={[styles.wrapper, style]}>
-          {this.renderUpIcon()}
-
           {count == 0 ? null : (
             <View style={styles.textWrapper}>
               <Text style={styles.text}>{count}</Text>
             </View>
           )}
+          {this.renderUpIcon()}
         </View>
       </TouchableOpacity>
     );
@@ -88,7 +87,7 @@ const styles = StyleSheet.create({
     width: 40,
   },
   textWrapper: {
-    paddingLeft: 7
+    paddingRight: 7
   },
   text: {
     fontSize: 12,

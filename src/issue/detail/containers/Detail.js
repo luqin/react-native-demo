@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import Button from '../../../components/Button';
 import Spinner from '../../../components/Spinner';
@@ -107,6 +107,13 @@ class Detail extends React.Component {
           <Text>评论（5）</Text>
         </View>
         <CommentList/>
+
+        <View style={styles.commentLoadMoreWrapper}>
+          <View style={styles.commentLoadMore}>
+            <Text>更多（20）</Text>
+            <Icon name={'ios-arrow-down'} size={18}/>
+          </View>
+        </View>
       </View>
     );
   }
@@ -194,6 +201,16 @@ var styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderColor: '#ddd'
+  },
+
+  commentLoadMoreWrapper: {
+    alignItems: 'flex-end',
+    right: 0,
+    padding: 10,
+  },
+
+  commentLoadMore: {
+    flexDirection: 'row',
   },
 });
 
