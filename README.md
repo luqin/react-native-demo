@@ -1,5 +1,11 @@
 # react-native-demo
 
+
+[![NPM version][npm-badge]][npm]
+[![Dependency Status][deps-badge]][deps]
+[![devDependency Status][dev-deps-badge]][dev-deps]
+[![peerDependency Status][peer-deps-badge]][peer-deps]
+
 ## Libraries
 
 - [react](http://facebook.github.io/react/) and [react native](https://facebook.github.io/react-native/) 
@@ -73,3 +79,14 @@ For absolute beginners, see: [react-howto](https://github.com/petehunt/react-how
 
 So you've decided to give this web stack a chance, but where is the documentation? Code is documentation in itself as it illustrates various patterns, but to start with you should educate yourself on [React.js](http://facebook.github.io/react/) and [Redux](http://redux.js.org/). You should [learn ES6](https://babeljs.io/docs/learn-es6/) to refresh your knowledge about "new" JavaScript practices and syntax. This stack uses [immutable.js](http://facebook.github.io/immutable-js/) and class-less design for a [good reason](https://github.com/facebook/immutable-js/#the-case-for-immutability). [Node.js](http://nodejs.org/api/).
 
+[npm-badge]: http://badge.fury.io/js/react-native-demo.svg
+[npm]: https://www.npmjs.com/package/react-native-demo
+
+[deps-badge]: https://david-dm.org/luqin/react-native-demo.svg
+[deps]: https://david-dm.org/luqin/react-native-demo
+
+[dev-deps-badge]: https://david-dm.org/luqin/react-native-demo/dev-status.svg
+[dev-deps]: https://david-dm.org/luqin/react-native-demo#info=devDependencies
+
+[peer-deps-badge]: https://david-dm.org/luqin/react-native-demo/peer-status.svg
+[peer-deps]: https://david-dm.org/luqin/react-native-demo#info=peerDependencies 
