@@ -14,6 +14,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Button from '../../../components/Button';
 import Spinner from '../../../components/Spinner';
 
+import CommentList from '../components/CommentList';
+
 class Detail extends React.Component {
 
   static propTypes = {};
@@ -54,7 +56,7 @@ class Detail extends React.Component {
         }, {
           type: 'image',
           url: 'http://img.sj33.cn/uploads/allimg/201401/7-140120011050954.jpg',
-        }, ]
+        },]
       });
     }, 1000);
   }
@@ -95,6 +97,18 @@ class Detail extends React.Component {
     );
   }
 
+  /**
+   * 评论列表
+   */
+  renderCommentList() {
+    return (
+      <View>
+        <Text>评论（5）</Text>
+        <CommentList/>
+      </View>
+    );
+  }
+
   render() {
     return (
       <View style={{flex:1}}>
@@ -107,9 +121,7 @@ class Detail extends React.Component {
         </View>
 
         <View style={styles.separator}/>
-        <Text>
-          评论（5）
-        </Text>
+        {this.renderCommentList()}
 
         <View style={styles.separator}/>
         <View style={styles.replyContainer}>
@@ -118,7 +130,7 @@ class Detail extends React.Component {
             placeholder="评论"
             multiline={true}
           />
-          <Button style={{}}>
+          <Button style={styles.replyButton} onPress={()=>{console.info('reply')}}>
             发送
           </Button>
         </View>
@@ -133,10 +145,14 @@ var styles = StyleSheet.create({
     height: 5,
     backgroundColor: '#ddd'
   },
+
   replyContainer: {
+    height: 50,
     flexDirection: 'row',
-    bottom: 0,
+    //bottom: 0,
+    marginLeft: 10,
     marginRight: 10,
+    justifyContent: 'center',
   },
   replyInput: {
     flex: 1,
@@ -144,8 +160,7 @@ var styles = StyleSheet.create({
     borderColor: '#0f0f0f',
   },
   replyButton: {
-    width: 100,
-    // height: 30,
+    marginTop: 3,
   },
   replyButtonText: {
     color: 'rgba(255,255,255,0.9)',

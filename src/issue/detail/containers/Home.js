@@ -6,6 +6,7 @@ import {
   ToolbarAndroid,
   Image,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -77,15 +78,21 @@ class Home extends React.Component {
           colors={['#A89426', '#A89426', '#132131']}
           style={styles.header}
         >
-          <View style={styles.headerLeft} onPress={this.openProfile}>
+          <TouchableOpacity onPress={this.openProfile} style={{flex: 1, flexDirection: 'row',}}>
             <Image
               style={styles.avatar}
               source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
+              onPress={()=>{this.openProfile();}}
             />
-            <Text style={styles.headerName}>
-              秦贺
-            </Text>
-          </View>
+            <View style={styles.headerLeft} onPress={this.openProfile}>
+              <Text style={styles.headerName}>
+                秦贺
+              </Text>
+              <Text style={styles.headerName}>
+                渠道部 | 总监
+              </Text>
+            </View>
+          </TouchableOpacity>
           <View style={styles.headerRight}>
             <Text style={{color: '#fff'}}>
               处理中
@@ -194,15 +201,18 @@ const styles = StyleSheet.create({
     height: 60,
     padding: 10,
   },
+  avatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+  },
   headerLeft: {
     flex: 1,
-    flexDirection: 'row',
+    marginLeft: 8,
   },
   headerName: {
-    flex: 1,
     color: '#fff',
     fontSize: 14,
-    marginLeft: 8,
   },
   headerRight: {
     width: 50,
@@ -211,11 +221,6 @@ const styles = StyleSheet.create({
     color: '#00FF7F',
     fontSize: 16,
     fontWeight: 'bold',
-  },
-  avatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
   },
 });
 
