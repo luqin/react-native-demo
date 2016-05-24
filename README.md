@@ -13,6 +13,7 @@
 - [babeljs](https://babeljs.io/)
 - [eslint](http://eslint.org/)
 - [chriso/validator.js](https://github.com/chriso/validator.js) For simple yet powerfull Este sync/async validation.
+- [moment](https://github.com/moment/moment)
 - [react-native-sound](https://github.com/zmxv/react-native-sound)
 - [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
 - [react-native-fs](https://github.com/johanneslumpe/react-native-fs)
