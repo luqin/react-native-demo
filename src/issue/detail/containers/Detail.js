@@ -103,7 +103,9 @@ class Detail extends React.Component {
   renderCommentList() {
     return (
       <View>
-        <Text>评论（5）</Text>
+        <View style={styles.commentListHeader}>
+          <Text>评论（5）</Text>
+        </View>
         <CommentList/>
       </View>
     );
@@ -111,7 +113,7 @@ class Detail extends React.Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
+      <ScrollView style={{flex:1}}>
         {/* 描述 */}
         <View style={{margin: 10,}}>
           <Text>
@@ -124,6 +126,16 @@ class Detail extends React.Component {
         {this.renderCommentList()}
 
         <View style={styles.separator}/>
+        <View style={{margin: 10,}}>
+          <Text>
+            单号：S201603060023{'\n'}
+            申请时间：2016-03-09 12:23{'\n'}
+            受理时间：2016-03-09 12:29{'\n'}
+            目标完成时间：2016-03-09 13:15
+          </Text>
+        </View>
+
+        <View style={styles.separator}/>
         <View style={styles.replyContainer}>
           <TextInput
             style={styles.replyInput}
@@ -134,7 +146,7 @@ class Detail extends React.Component {
             发送
           </Button>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -172,11 +184,16 @@ var styles = StyleSheet.create({
     height: 50,
     marginTop: 10,
   },
-
   thumbnailImage: {
     width: 50,
     height: 50,
     marginRight: 5,
+  },
+
+  commentListHeader: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderColor: '#ddd'
   },
 });
 
