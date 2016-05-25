@@ -5,6 +5,7 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  Platform
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -13,9 +14,9 @@ class CommentUp extends React.Component {
   static propTypes = {
     pending: PropTypes.bool,
     disabled: PropTypes.bool,
-    replyId: PropTypes.string,
+    replyId: PropTypes.number,
     ups: PropTypes.array,
-    userId: PropTypes.string
+    userId: PropTypes.number
   };
 
   static defaultProps = {
