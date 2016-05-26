@@ -1,4 +1,4 @@
-rootProject.name = 'Relax'
+rootProject.name = 'RNDemo'
 
 include ':app'
 include ':react-native-image-picker'

@@ -1,4 +1,4 @@
-package com.relax;
+package com.rn.demo;
 
 import com.facebook.react.ReactActivity;
 import com.imagepicker.ImagePickerPackage;
@@ -18,7 +18,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "Relax";
+        return "RNDemo";
     }
 
     /**
