@@ -4,6 +4,8 @@ import {
   View,
 } from 'react-native';
 
+import CommentList from '../components/CommentList';
+
 class Progress extends React.Component {
 
   static propTypes = {};
@@ -21,9 +23,7 @@ class Progress extends React.Component {
   render() {
     return (
       <View>
-        <Text>
-          Progress
-        </Text>
+        <CommentList/>
       </View>
     );
   }

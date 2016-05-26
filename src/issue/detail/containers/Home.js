@@ -16,6 +16,7 @@ import Spinner from '../../../components/Spinner';
 import TabBar from '../../../components/TabBar';
 import Detail from './Detail';
 import Attachment from './Attachment';
+import Progress from './Progress';
 
 class Home extends React.Component {
 
@@ -128,13 +129,7 @@ class Home extends React.Component {
             }, {
               title: '进度',
               iconName: 'refresh',
-              renderContent: () => {
-                return (
-                  <View style={{flex:1}}>
-                    <Icon name="refresh" size={30} color="yellow"/>
-                    <Text>附件</Text>
-                  </View>
-                );}
+              renderContent: () => <Progress/>,
             }, {
               title: '设备',
               iconName: 'tv',
