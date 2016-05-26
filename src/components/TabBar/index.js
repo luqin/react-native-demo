@@ -1,7 +1,7 @@
 /*
  * Component Name: TabBar
  * Description: This component is used for render a TabBar
- * 
+ *
  * Dependencies:
  *  -> react-native-vector-icons 1.0.3 (https://github.com/oblador/react-native-vector-icons)
  *      - This library is used for fontawesome icons on the TabBar. For iOS only use

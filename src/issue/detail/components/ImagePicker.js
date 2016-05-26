@@ -1,14 +1,14 @@
-var React = require('react');
-var ReactNative = require('react-native');
-var {
+import React from 'react';
+import {
   StyleSheet,
   Text,
   View,
   Image,
-} = ReactNative;
+  NativeModules,
+} from 'react-native';
 
-import {ImagePickerManager} from 'NativeModules';
 import Icon from 'react-native-vector-icons/Ionicons';
+const {ImagePickerManager} = NativeModules;
 
 export default React.createClass({
   getInitialState() {

@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {
-  Dimensions,
   View,
   Text,
   Image,
@@ -116,12 +115,12 @@ class CommentList extends React.Component {
   render() {
     return (
       <ListView
+        ref={view => {this.listView = view}}
         showsVerticalScrollIndicator
         removeClippedSubviews
         enableEmptySections
-        ref={view => {this.listView = view}}
         initialListSize={10}
-        pagingEnabled={false}
+        pagingEnabled={true}
         scrollRenderAheadDistance={90}
         dataSource={this.state.ds}
         renderRow={this.renderRow.bind(this)}
@@ -138,6 +137,7 @@ class CommentList extends React.Component {
             {...Constants.refreshControl}
           />
 				}
+        style={styles.listview}
       />
     );
   }
@@ -147,6 +147,10 @@ const authorImgSize = 35;
 const commentIconSize = 12;
 
 const styles = StyleSheet.create({
+  listview: {
+    flex: 1,
+  },
+
   commentWrapper: {
     borderBottomColor: 'rgba(0,0,0,0.02)',
     borderBottomWidth: 1,
