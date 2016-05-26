@@ -9,8 +9,6 @@
   },
   "dependencies": {
     "moment": "^2.13.0",
-    "react": "15.0.2",
-    "react-native": "0.26.0",
     "react-native-button": "^1.6.0",
     "react-native-image-picker": "^0.18.17",
     "react-native-linear-gradient": "^1.5.7",
