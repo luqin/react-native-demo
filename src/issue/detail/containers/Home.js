@@ -17,6 +17,8 @@ import TabBar from '../../../components/TabBar';
 import Detail from './Detail';
 import Attachment from './Attachment';
 import Progress from './Progress';
+import Device from './Device';
+import Related from './Related';
 
 class Home extends React.Component {
 
@@ -133,13 +135,7 @@ class Home extends React.Component {
             }, {
               title: '设备',
               iconName: 'tv',
-              renderContent: () => {
-                return (
-                  <View style={{flex:1}}>
-                    <Icon name="refresh" size={30} color="gray"/>
-                    <Text>附件</Text>
-                  </View>
-                );}
+              renderContent: () => <Device/>,
             }, {
               title: '知识',
               iconName: 'commenting-o',
@@ -153,13 +149,7 @@ class Home extends React.Component {
             }, {
               title: '相关',
               iconName: 'link',
-              renderContent: () => {
-                return (
-                  <View style={{flex:1}}>
-                    <Icon name="refresh" size={30} color="green"/>
-                    <Text>附件</Text>
-                  </View>
-                );}
+              renderContent: () => <Related/>,
             },
           ]}
         />

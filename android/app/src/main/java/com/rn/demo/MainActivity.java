@@ -1,6 +1,8 @@
 package com.rn.demo;
 
 import com.facebook.react.ReactActivity;
+import com.eguma.barcodescanner.BarcodeScanner;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
@@ -38,6 +40,8 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new BarcodeScanner(),
+            new RCTCameraPackage(),
             new ImagePickerPackage(),
             new VectorIconsPackage(),
             new LinearGradientPackage()

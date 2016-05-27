@@ -5,9 +5,9 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import ImagePicker from '../components/ImagePicker';
+import NavigatorExample from './Navigator/NavigatorExample';
 
-class Attachment extends React.Component {
+class Related extends React.Component {
 
   static propTypes = {};
 
@@ -24,10 +24,10 @@ class Attachment extends React.Component {
   render() {
     return (
       <View style={{flex:1}}>
-        <ImagePicker/>
+        <NavigatorExample/>
       </View>
     );
   }
 }
 
-export default Attachment;
+export default Related;

@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {
-  Dimensions,
   View,
   Text,
   Image,

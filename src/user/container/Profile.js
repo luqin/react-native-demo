@@ -1,13 +1,10 @@
 import React from 'react';
 import {
-  View,
   Text,
-  StyleSheet,
+  View,
 } from 'react-native';
 
-import ImagePicker from '../components/ImagePicker';
-
-class Attachment extends React.Component {
+class Progress extends React.Component {
 
   static propTypes = {};
 
@@ -23,11 +20,11 @@ class Attachment extends React.Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
-        <ImagePicker/>
+      <View>
+        
       </View>
     );
   }
 }
 
-export default Attachment;
+export default Progress;

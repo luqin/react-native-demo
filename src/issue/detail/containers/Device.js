@@ -5,9 +5,9 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import ImagePicker from '../components/ImagePicker';
+import BarcodeScannerExample from '../components/BarcodeScannerExample';
 
-class Attachment extends React.Component {
+class Device extends React.Component {
 
   static propTypes = {};
 
@@ -24,10 +24,10 @@ class Attachment extends React.Component {
   render() {
     return (
       <View style={{flex:1}}>
-        <ImagePicker/>
+        <BarcodeScannerExample/>
       </View>
     );
   }
 }
 
-export default Attachment;
+export default Device;
