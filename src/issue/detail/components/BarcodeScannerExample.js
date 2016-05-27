@@ -40,7 +40,7 @@ class BarcodeScannerExample extends React.Component {
 
   scanToggle() {
     if (this.state.scanning) {
-      ToastAndroid.show('取消成功', ToastAndroid.SHORT);
+      ToastAndroid.show('取消', ToastAndroid.SHORT);
     }
     this.setState({
       scanning: !this.state.scanning,
