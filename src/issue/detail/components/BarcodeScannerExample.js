@@ -93,7 +93,7 @@ class BarcodeScannerExample extends React.Component {
             size={28}
             style={styles.iconButton}
           >
-            <Text style={styles.iconButtonText}>{scanning ? '取消' : '扫描'}</Text>
+            <Text style={styles.iconButtonText}>{scanning ? '退出' : '扫一扫'}</Text>
           </Icon.Button>
           {code ? this.renderCode(code) : null}
         </View>

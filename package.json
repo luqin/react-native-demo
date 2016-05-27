@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "cd android && gradlew clean",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "android": "node node_modules/react-native/local-cli/cli.js run-android"
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "release": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "moment": "^2.13.0",
